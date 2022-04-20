@@ -27,6 +27,7 @@ Primary.args = {
   borderWidth: "1px",
   borderRadius: "24px",
   lineHeight: "21px",
+  fontSize: "16px",
 };
 
 export const Secondary = Template.bind({});

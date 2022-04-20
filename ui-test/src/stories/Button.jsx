@@ -15,6 +15,7 @@ const ButtonWrapper = styled.button`
   background-color: ${(props) => props.backgroundColor};
   border-radius: ${(props) => props.borderRadius};
   line-height: ${(props) => props.lineHeight};
+  font-size: ${(props) => props.fontSize};
 `;
 
 export const Button = ({ primary, size, label, text, ...props }) => {
