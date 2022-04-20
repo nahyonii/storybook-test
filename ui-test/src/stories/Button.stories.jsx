@@ -9,6 +9,8 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: "color" },
+    borderColor: { control: "color" },
+    textColor: { control: "color" },
   },
 };
 
@@ -18,8 +20,13 @@ const Template = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  primary: true,
-  label: "Button",
+  text: "버튼",
+  width: "123px",
+  height: "50px",
+  padding: "10px 30px",
+  borderWidth: "1px",
+  borderRadius: "24px",
+  lineHeight: "21px",
 };
 
 export const Secondary = Template.bind({});
