@@ -1,25 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./button.css";
-
+import styled from "styled-components";
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+
+const ButtonWrapper = styled.button`
+  padding: ${(props) => props.padding};
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  border: ${(props) => props.borderWidth} solid ${(props) => props.borderColor};
+  color: ${(props) => props.textColor};
+  background-color: ${(props) => props.backgroundColor};
+  border-radius: ${(props) => props.borderRadius};
+  line-height: ${(props) => props.lineHeight};
+`;
+
+export const Button = ({ primary, size, label, text, ...props }) => {
   return (
-    <button
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
+    <ButtonWrapper type="button" {...props}>
+      {text}
+    </ButtonWrapper>
   );
 };
 
@@ -31,7 +33,6 @@ Button.propTypes = {
   /**
    * What background color to use
    */
-  backgroundColor: PropTypes.string,
   /**
    * How large should the button be?
    */
@@ -39,15 +40,12 @@ Button.propTypes = {
   /**
    * Button contents
    */
-  label: PropTypes.string.isRequired,
   /**
    * Optional click handler
    */
-  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
   primary: false,
   size: "medium",
   onClick: undefined,
