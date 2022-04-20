@@ -27,13 +27,6 @@ export const Button = ({ primary, size, label, text, ...props }) => {
 
 Button.propTypes = {
   /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-  /**
-   * What background color to use
-   */
-  /**
    * How large should the button be?
    */
   size: PropTypes.oneOf(["small", "medium", "large"]),
@@ -46,7 +39,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  primary: false,
   size: "medium",
   onClick: undefined,
 };
