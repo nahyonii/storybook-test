@@ -60,6 +60,7 @@
     "@storybook/node-logger": "^6.4.22",
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.22",
+    "@storybook/storybook-deployer": "^2.8.11",
     "@storybook/testing-library": "^0.0.10",
     "gh-pages": "^3.2.3",
     "webpack": "^5.72.0"
